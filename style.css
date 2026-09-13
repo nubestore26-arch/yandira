@@ -1,0 +1,534 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fff8fa;
+    color: #321f26;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   PORTADA
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 30px;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #ffdce6,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #f8cbd8,
+            transparent 35%
+        ),
+        #fff8fa;
+}
+
+.hero-content {
+    max-width: 700px;
+    animation: fadeUp 1.2s ease;
+}
+
+.small-text,
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 12px;
+    color: #a15c72;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 8vw, 90px);
+    line-height: 1;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.subtitle {
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    color: #76535d;
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+.main-btn,
+.yes-btn {
+    border: none;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.main-btn {
+    background: #321f26;
+    color: white;
+
+    padding: 16px 30px;
+
+    border-radius: 50px;
+
+    font-size: 15px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(50, 31, 38, 0.2);
+}
+
+.main-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(50, 31, 38, 0.3);
+}
+
+
+/* =========================
+   SECCIONES
+========================= */
+
+.section {
+    max-width: 900px;
+    margin: auto;
+    padding: 130px 30px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: clamp(35px, 6vw, 60px);
+    font-weight: 400;
+    margin-bottom: 35px;
+}
+
+.text {
+    max-width: 650px;
+    margin: 15px auto;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 17px;
+    line-height: 1.8;
+
+    color: #705962;
+}
+
+
+/* =========================
+   FOTOS
+========================= */
+
+.photo-section {
+    display: flex;
+    justify-content: center;
+
+    padding: 40px 20px 100px;
+}
+
+.photo-card {
+    width: min(90%, 650px);
+
+    background: white;
+
+    padding: 15px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(70, 30, 45, 0.15);
+
+    transform: rotate(-1deg);
+}
+
+.photo-card img {
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    object-fit: cover;
+}
+
+.photo-caption {
+    padding: 20px 10px 10px;
+
+    text-align: center;
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   RAZONES
+========================= */
+
+.reasons {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 60px;
+}
+
+.reason {
+    background: white;
+
+    padding: 35px 25px;
+
+    border-radius: 20px;
+
+    text-align: left;
+
+    box-shadow:
+        0 15px 50px
+        rgba(70, 30, 45, 0.08);
+}
+
+.reason span {
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    color: #c26a84;
+}
+
+.reason h3 {
+    margin: 15px 0;
+
+    font-size: 24px;
+
+    font-weight: 400;
+}
+
+.reason p {
+    font-family: Arial, sans-serif;
+
+    color: #76535d;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   CARTA
+========================= */
+
+.letter-section {
+    padding: 100px 20px;
+}
+
+.letter {
+    max-width: 700px;
+
+    margin: auto;
+
+    padding: 60px;
+
+    background: #fffdf9;
+
+    box-shadow:
+        0 20px 70px
+        rgba(70, 30, 45, 0.1);
+
+    font-size: 20px;
+    line-height: 1.9;
+}
+
+.letter p {
+    margin-bottom: 25px;
+}
+
+.signature {
+    text-align: right;
+    font-style: italic;
+}
+
+
+/* =========================
+   PREGUNTA
+========================= */
+
+.question-section {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    background:
+        radial-gradient(
+            circle,
+            #ffdce6,
+            #fff8fa 65%
+        );
+}
+
+.question-content {
+    max-width: 800px;
+}
+
+.big-heart {
+    font-size: 70px;
+
+    animation:
+        heartbeat 1.5s infinite;
+}
+
+.question-content h2 {
+    font-size: clamp(50px, 8vw, 90px);
+
+    font-weight: 400;
+
+    margin: 25px 0;
+}
+
+.question-content p {
+    font-family: Arial, sans-serif;
+    color: #76535d;
+}
+
+
+/* =========================
+   BOTÓN SÍ
+========================= */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 45px;
+}
+
+.yes-btn {
+    background: #b94c70;
+
+    color: white;
+
+    padding: 20px 55px;
+
+    border-radius: 50px;
+
+    font-size: 20px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(185, 76, 112, 0.3);
+}
+
+.yes-btn:hover {
+    transform: scale(1.08);
+}
+
+
+/* =========================
+   PANTALLA FINAL
+========================= */
+
+#final {
+    display: none;
+}
+
+#final.active {
+    display: flex;
+
+    min-height: 100vh;
+    width: 100%;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #ffd5e2,
+            #fff8fa
+        );
+}
+
+.final-content {
+    max-width: 850px;
+
+    animation: fadeUp 1s ease;
+}
+
+.celebration-heart {
+    font-size: 110px;
+
+    animation:
+        heartbeat 1.3s infinite;
+}
+
+.final-content h1 {
+    font-size: clamp(
+        40px,
+        7vw,
+        75px
+    );
+
+    font-weight: 400;
+
+    margin: 25px 0;
+}
+
+.final-content p {
+    font-family: Arial, sans-serif;
+
+    font-size: 18px;
+
+    color: #76535d;
+
+    margin-bottom: 20px;
+}
+
+.final-message {
+    font-size: 25px !important;
+}
+
+
+/* =========================
+   CORAZONES
+========================= */
+
+#hearts {
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 100;
+}
+
+.heart {
+    position: absolute;
+
+    bottom: -40px;
+
+    animation:
+        floatHeart linear forwards;
+}
+
+@keyframes floatHeart {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   ANIMACIONES
+========================= */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 700px) {
+
+    .section {
+        padding: 90px 20px;
+    }
+
+    .reasons {
+        grid-template-columns: 1fr;
+    }
+
+    .letter {
+        padding: 35px 25px;
+        font-size: 18px;
+    }
+
+    .yes-btn {
+        width: 220px;
+    }
+
+    .celebration-heart {
+        font-size: 80px;
+    }
+}
